@@ -1,3 +1,3 @@
 # spring-ws
-spring ws tutorials
 
+This repository contains how-to tutorials about Spring WS.
