@@ -1,0 +1,28 @@
+<xwss:SecurityConfiguration xmlns:xwss="http://java.sun.com/xml/ns/xwss/config"
+                            dumpMessages="true">
+
+    <!-- secure settings -->
+    <xwss:Encrypt>
+        <xwss:X509Token certificateAlias="client"/>
+        <xwss:Target type="qname">{http://memorynotfound.com/beer}getBeerResponse</xwss:Target>
+        <xwss:Target type="xpath">//env:Body</xwss:Target>
+    </xwss:Encrypt>
+
+    <xwss:RequireTimestamp />
+
+    <xwss:Sign includeTimestamp="true">
+        <xwss:X509Token certificateAlias="server"/>
+    </xwss:Sign>
+
+    <!-- validations -->
+    <xwss:RequireSignature requireTimestamp="true">
+        <xwss:X509Token certificateAlias="server"/>
+    </xwss:RequireSignature>
+
+    <xwss:RequireEncryption>
+        <xwss:X509Token certificateAlias="server"/>
+        <xwss:Target type="qname">{http://memorynotfound.com/beer}getBeerRequest</xwss:Target>
+        <xwss:Target type="xpath">//env:Body</xwss:Target>
+    </xwss:RequireEncryption>
+
+</xwss:SecurityConfiguration>

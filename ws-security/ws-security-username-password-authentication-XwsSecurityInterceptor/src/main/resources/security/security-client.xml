@@ -1,0 +1,15 @@
+<xwss:SecurityConfiguration xmlns:xwss="http://java.sun.com/xml/ns/xwss/config"
+                            dumpMessages="true">
+
+    <xwss:UsernameToken
+            name="service"
+            password="service"
+            id="token"
+            digestPassword="false"
+            useNonce="false"/>
+
+    <xwss:Timestamp
+            id="timestamp"
+            timeout="300"/>
+
+</xwss:SecurityConfiguration>

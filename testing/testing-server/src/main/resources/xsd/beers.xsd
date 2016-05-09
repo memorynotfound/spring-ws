@@ -1,0 +1,27 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://memorynotfound.com/beer"
+           targetNamespace="http://memorynotfound.com/beer"
+           elementFormDefault="qualified">
+
+    <xs:element name="getBeerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getBeerResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="beer" type="tns:beer" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="beer">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

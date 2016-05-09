@@ -1,0 +1,14 @@
+<xwss:SecurityConfiguration xmlns:xwss="http://java.sun.com/xml/ns/xwss/config"
+                            dumpMessages="true">
+
+    <xwss:RequireUsernameToken
+            id="token"
+            passwordDigestRequired="false"
+            nonceRequired="false"/>
+
+    <xwss:RequireTimestamp
+            id="timestamp"
+            maxClockSkew="60"
+            timestampFreshnessLimit="300"/>
+
+</xwss:SecurityConfiguration>
