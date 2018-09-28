@@ -16,4 +16,3 @@ This repository contains how-to tutorials about Spring WS.
 - https://memorynotfound.com/spring-ws-client-side-integration-testing/
 - https://memorynotfound.com/spring-ws-username-password-authentication-wss4j/
 - https://memorynotfound.com/spring-ws-certificate-authentication-wss4j/
-- https://memorynotfound.com/category/spring-framework/spring-ws/page/2/
